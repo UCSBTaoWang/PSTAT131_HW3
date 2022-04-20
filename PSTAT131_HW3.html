@@ -546,7 +546,7 @@ sum(is.na(titanic_train)) # 696</code></pre>
 <p>Based on what we got here, we can see that there are some potential
 issues. There are 696 observations contain missing value. To be more
 specific, for variable age, there are 139 missing values; for variable
-cabin, there are 556 missing value; for variable embarked there are 1
+cabin, there are 556 missing value; for variable embarked, there are 1
 missing value. In addition, we can see that the ticket has different
 format. These potential issues may cause problem.</p>
 <ul>
@@ -621,8 +621,8 @@ which direction?</p>
 <li>age are negatively correlated with parch</li>
 <li>age are positively correlated with fare</li>
 <li>sib_sp are positively correlated with parch</li>
-<li>sib_sp are positively correlated with fare *parch are positively
-correlated with fare</li>
+<li>sib_sp are positively correlated with fare</li>
+<li>parch are positively correlated with fare</li>
 </ul>
 </div>
 <div id="question-4" class="section level3">
@@ -794,6 +794,11 @@ results %&gt;%
 ## 2      0.803 LDA                
 ## 3      0.789 QDA                
 ## 4      0.784 Naive Bayes</code></pre>
+<ul>
+<li>Which model achieved the highest accuracy on the training data?</li>
+</ul>
+<p>Based on what we got, we know that logistic regression model achieved
+the highest accuracy on the training data.</p>
 </div>
 <div id="question-10" class="section level3">
 <h3>Question 10</h3>
@@ -859,24 +864,26 @@ augment(log_fit, new_data = titanic_test) %&gt;%
 ##   &lt;chr&gt;   &lt;chr&gt;          &lt;dbl&gt;
 ## 1 roc_auc binary         0.850</code></pre>
 <ul>
-<li><p>How did the model perform? Well, the AUC we got is about 0.8502
-(close to 1). By what we learned about AUC, we can conclude that our
-model perform good. According to the professor, an AUC above 0.85 means
-high classification accuracy.</p></li>
-<li><p>Compare its training and testing accuracies.</p></li>
+<li>How did the model perform?</li>
+</ul>
+<p>Well, the AUC we got is about 0.8502 (close to 1). By what we learned
+about AUC, we can conclude that our model perform good. According to the
+professor, an AUC above 0.85 means high classification accuracy.</p>
+<ul>
+<li>Compare its training and testing accuracies.</li>
 </ul>
 <p>The training accuracy is 0.818820. The testing accuracy is 0.7821229.
 We can that The testing accuracy is smaller than the training accuracy.
 They are different.</p>
 <ul>
-<li><p>If the values differ, why do you think this is so?</p></li>
-<li><p>According to the lecture, we know that the testing accuracy is
+<li>If the values differ, why do you think this is so?</li>
+</ul>
+<p>According to the lecture, we know that the testing accuracy is
 smaller than the training accuracy because we use 80% of data in the
 training dataset and 20% in the testing dataset. When we use more data,
 our model will be more accurate. I think it will be a very important
 reason why our testing accuracy is smaller than our training
-accuracy.</p></li>
-</ul>
+accuracy.</p>
 </div>
 
 

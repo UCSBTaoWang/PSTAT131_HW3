@@ -98,7 +98,7 @@ sum(is.na(titanic_train$embarked)) # 1
 
 
 ```
-Based on what we got here, we can see that there are some potential issues. There are 696 observations contain missing value. To be more specific, for variable age, there are 139 missing values; for variable cabin, there are 556 missing value; for variable embarked there are 1 missing value. In addition, we can see that the ticket has different format. These potential issues may cause problem. 
+Based on what we got here, we can see that there are some potential issues. There are 696 observations contain missing value. To be more specific, for variable age, there are 139 missing values; for variable cabin, there are 556 missing value; for variable embarked, there are 1 missing value. In addition, we can see that the ticket has different format. These potential issues may cause problem. 
 
 * 4. Why is it a good idea to use stratified sampling for this data?  (We haven't learned it yet.)
 
@@ -153,7 +153,7 @@ According the matrix we got, we can know that:
 * age are positively correlated with fare
 * sib_sp are positively correlated with parch
 * sib_sp are positively correlated with fare
-*parch are positively correlated with fare
+* parch are positively correlated with fare
 
 
 
@@ -310,6 +310,10 @@ results %>%
 
 ```
 
+* Which model achieved the highest accuracy on the training data?
+
+
+Based on what we got, we know that logistic regression model achieved the highest accuracy on the training data.
 
 
 ### Question 10
@@ -368,7 +372,8 @@ augment(log_fit, new_data = titanic_test) %>%
 ```
 
 * How did the model perform? 
-* Well, the AUC we got is about 0.8502 (close to 1). By what we learned about AUC, we can conclude that our model perform good. According to the professor, an AUC above 0.85 means high classification accuracy.
+
+Well, the AUC we got is about 0.8502 (close to 1). By what we learned about AUC, we can conclude that our model perform good. According to the professor, an AUC above 0.85 means high classification accuracy.
 
 
 
@@ -380,7 +385,7 @@ We can that The testing accuracy is smaller than the training accuracy. They are
 
 * If the values differ, why do you think this is so?
 
-* According to the lecture, we know that the testing accuracy is smaller than the training accuracy because we use 80% of data in the training dataset and 20% in the testing dataset. When we use more data, our model will be more accurate. I think it will be a very important reason why our testing accuracy is smaller than our training accuracy.
+According to the lecture, we know that the testing accuracy is smaller than the training accuracy because we use 80% of data in the training dataset and 20% in the testing dataset. When we use more data, our model will be more accurate. I think it will be a very important reason why our testing accuracy is smaller than our training accuracy.
 
 
 
